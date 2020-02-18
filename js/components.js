@@ -70,3 +70,17 @@ components.login = `<div><h1>Login Screen</h1></div>`;
         overlay[0].classList.add('overlay-container-hidden'); 
         container[0].classList.remove('sign-up-container-active');
     });
+
+    // const signUp = document.getElementsByClassName('sign-up-container');
+    // console.log(signUp)
+
+    var check = function() {
+        if (document.getElementById('password-input').value ==
+          document.getElementById('confirm-password-input').value) {
+          document.getElementById('message').style.color = 'green';
+          document.getElementById('message').innerHTML = '';
+        } else {
+          document.getElementById('message').style.color = 'red';
+          document.getElementById('message').innerHTML = 'Not Matching';
+        }
+      }

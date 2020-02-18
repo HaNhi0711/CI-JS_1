@@ -17,10 +17,11 @@
             <h1>Create Account</h1>
             <!-- <span>or use your email for registration</span> -->
             <input type="text" placeholder="Name" />
-            <input type="email" placeholder="Email" />
-            <input type="password" placeholder="Password" />
-            <input id="confirm-password" type="text" placeholder="Confirm password">
-            <button>Sign Up</button>
+            <input id="email-input" type="email" placeholder="Email" />
+            <input id="password-input" type="password" placeholder="Password" onkeyup='check();' />
+            <input id="confirm-password-input" type="password" placeholder="Confirm password" onkeyup='check();'>
+            <span id='message'></span>
+            <button id="submit">Sign Up</button>
         </form>
       </div>
       <div class="form-container sign-in-container">
