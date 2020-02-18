@@ -1,3 +1,3 @@
-window.onload = () => {
-    view.setActiveScreen('register');
-};
+// window.onload = () => {
+//     view.setActiveScreen('register');
+// };
