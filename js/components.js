@@ -15,13 +15,15 @@ components.register = `
             <input type="password" name="password" placeholder="Password" />
             <div class="error" id="password-error"></div>
 
-            <input id="confirmpassword-input" type="password" name="confirmPassword" placeholder="Confirm password" onkeyup='check();' />
+            <input id="confirmpassword-input" type="password" name="confirmPassword" placeholder="Confirm password" />
             <div class="error" id="confirmpassword-error"></div>
 
             <a id="already-have-account" href="#">Already have an account? Sign in</a>
             <button id="submit">Sign Up</button>
         </form>
       </div>
+
+      <div class="error" id="form-error"></div>
 
       <div class="overlay-container overlay-container-hidden">
         <div class="overlay">
@@ -43,27 +45,28 @@ components.login =
           
             <div id="signin-form">
               <h1>Sign in</h1>
-                <form action="#" id="form-signin">
+                <form id="login-form">
                     <div class="input-group">
                         <label for=""></label>
                         <br>
                         <input id="email-input" name="email" type="email" placeholder="Phone number, username or email">
                     </div>
 
+                    <div class="error" id="form-error"></div>
+
                     <div class="input-group">
                         <label for=""></label>
                         <br>
-                        <input id="password-input" type="password" placeholder="Password">
+                        <input id="password-input" name="password" type="password" placeholder="Password">
                     </div>
                     <p id="error-message"></p>
-                    <button id="button">Sign in</button>
+                    <button type="submit">Sign in</button>
                 </form>
             </div>
         </div>
     </div>
   </div>
 </div>`;
-
 
 
 // const signUpButton = document.getElementById('signUp');
@@ -82,13 +85,13 @@ components.login =
 // const signUp = document.getElementsByClassName('sign-up-container');
 // console.log(signUp)
 
-var check = function () {
-  if (document.getElementById('password-input').value ==
-    document.getElementById('confirm-password-input').value) {
-    document.getElementById('message').style.color = 'green';
-    document.getElementById('message').innerHTML = '';
-  } else {
-    document.getElementById('message').style.color = 'red';
-    document.getElementById('message').innerHTML = 'Not Matching';
-  }
-}
+// var check = function () {
+//   if (document.getElementById('password-input').value ==
+//     document.getElementById('confirm-password-input').value) {
+//     document.getElementById('message').style.color = 'green';
+//     document.getElementById('message').innerHTML = '';
+//   } else {
+//     document.getElementById('message').style.color = 'red';
+//     document.getElementById('message').innerHTML = 'Not Matching';
+//   }
+// }
