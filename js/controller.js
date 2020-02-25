@@ -105,7 +105,19 @@ controller.login = async loginForm => {
                     html: 'Đăng nhập thành công!',
                     timer: 2000,
                     timerProgressBar: true,
-                    showConfirmButton: false
+                    showConfirmButton: false,onBeforeOpen: () => {
+                        Swal.showLoading()
+                        timerInterval = setInterval(() => {
+                          const content = Swal.getContent()
+                          if (content) {
+                            const b = content.querySelector('b')
+                            if (b) {
+                              b.textContent = Swal.getTimerLeft()
+                            }
+                          }
+                        }, 100)
+                      }
+
                 });
                 setTimeout(()=>
                 {
